@@ -11,11 +11,13 @@
         "alternativas": ["Pedro Álvares Cabral", "Cristóvão Colombo", "Dom Pedro I", "Vasco da Gama"],
         "correta": 0,
         "categoria": "História"
+         "imagem": ""
     },
     {
         "pergunta": "Qual a capital da França?",
         "alternativas": ["Londres", "Paris", "Berlim", "Madri"],
         "correta": 1,
         "categoria": "Geografia"
+         "imagem": ""
     }
 ]
