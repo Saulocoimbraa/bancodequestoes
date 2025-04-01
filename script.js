@@ -21,27 +21,35 @@ function mostrarQuestoes(categoria) {
         let div = document.createElement("div");
         div.className = "question";
         div.innerHTML = `<p>${questao.pergunta}</p>`;
-        
+
+        // Criamos uma div para exibir o resultado da resposta
+        let resultadoDiv = document.createElement("div");
+        resultadoDiv.id = `resultado-${index}`;
+        resultadoDiv.style.marginTop = "10px";
+        resultadoDiv.style.fontWeight = "bold";
+
         questao.alternativas.forEach((alt, i) => {
-            div.innerHTML += `<button onclick="verificarResposta('${questao.pergunta}', ${i})">${alt}</button> `;
+            div.innerHTML += `<button onclick="verificarResposta('${questao.pergunta}', ${i}, 'resultado-${index}')">${alt}</button> `;
         });
 
+        div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
     });
 }
 
-function verificarResposta(pergunta, respostaIndex) {
-    // Encontra a questão original pelo enunciado (para evitar problemas de índice)
+function verificarResposta(pergunta, respostaIndex, resultadoId) {
     let questao = todasQuestoes.find(q => q.pergunta === pergunta);
+    let resultadoDiv = document.getElementById(resultadoId);
 
     if (questao && questao.correta === respostaIndex) {
-        alert("Resposta correta! ✅");
+        resultadoDiv.innerHTML = "✅ Resposta correta!";
+        resultadoDiv.style.color = "green";
     } else {
-        alert("Resposta errada! ❌");
+        resultadoDiv.innerHTML = "❌ Resposta errada!";
+        resultadoDiv.style.color = "red";
     }
 }
 
-// Chama essa função quando o usuário muda a categoria
 function filtrarQuestoes() {
     let categoriaSelecionada = document.getElementById("filtro").value;
     mostrarQuestoes(categoriaSelecionada);
