@@ -2,11 +2,19 @@
     {
         "pergunta": "Qual é o resultado de 2 + 2?",
         "alternativas": ["3", "4", "5", "6"],
-        "correta": 1
+        "correta": 1,
+        "categoria": "Matemática"
     },
     {
-        "pergunta": "Qual a capital do Brasil?",
-        "alternativas": ["São Paulo", "Rio de Janeiro", "Brasília", "Belo Horizonte"],
-        "correta": 2
+        "pergunta": "Quem descobriu o Brasil?",
+        "alternativas": ["Pedro Álvares Cabral", "Cristóvão Colombo", "Dom Pedro I", "Vasco da Gama"],
+        "correta": 0,
+        "categoria": "História"
+    },
+    {
+        "pergunta": "Qual a capital da França?",
+        "alternativas": ["Londres", "Paris", "Berlim", "Madri"],
+        "correta": 1,
+        "categoria": "Geografia"
     }
 ]
