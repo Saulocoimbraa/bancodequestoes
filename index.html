@@ -11,7 +11,18 @@
 </head>
 <body>
     <h1>Banco de Questões</h1>
+
+    <!-- Dropdown para selecionar categoria -->
+    <label for="filtro">Escolha uma categoria:</label>
+    <select id="filtro" onchange="filtrarQuestoes()">
+        <option value="Todas">Todas</option>
+        <option value="Matemática">Matemática</option>
+        <option value="História">História</option>
+        <option value="Geografia">Geografia</option>
+    </select>
+
     <div id="quiz"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
