@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch("questoes.json")
         .then(response => response.json())
         .then(data => {
+            console.log('Dados carregados:', data); // Adicionando log para ver os dados carregados
             todasQuestoes = data; // Armazena todas as questões
             mostrarQuestoes("Todas"); // Exibe todas por padrão
-        });
+        })
+        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error)); // Captura qualquer erro
 });
 
 function mostrarQuestoes(categoria) {
@@ -16,6 +18,8 @@ function mostrarQuestoes(categoria) {
     let questoesFiltradas = categoria === "Todas" 
         ? todasQuestoes 
         : todasQuestoes.filter(q => q.categoria === categoria);
+
+    console.log('Questões filtradas:', questoesFiltradas); // Adicionando log para ver as questões filtradas
 
     questoesFiltradas.forEach((questao, index) => {
         let div = document.createElement("div");
