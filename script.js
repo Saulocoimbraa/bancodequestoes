@@ -41,6 +41,7 @@ function verificarResposta(pergunta, respostaIndex, resultadoId) {
     let questao = todasQuestoes.find(q => q.pergunta === pergunta);
     let resultadoDiv = document.getElementById(resultadoId);
 
+    // Remove o popup de resposta
     if (questao && questao.correta === respostaIndex) {
         resultadoDiv.innerHTML = "✅ Resposta correta!";
         resultadoDiv.style.color = "green";
@@ -54,3 +55,4 @@ function filtrarQuestoes() {
     let categoriaSelecionada = document.getElementById("filtro").value;
     mostrarQuestoes(categoriaSelecionada);
 }
+
