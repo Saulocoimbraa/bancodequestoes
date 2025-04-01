@@ -1,23 +1,38 @@
 [
     {
         "pergunta": "Qual é o resultado de 2 + 2?",
-        "alternativas": ["3", "4", "5", "6"],
+        "alternativas": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
         "correta": 1,
         "categoria": "Matemática",
         "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrOIXqBPnvj-TbNIyciADIvziFvtmkqCa5tDrn8q4IkYJ2J4GayXiJPwsXOZn-HZdaLiggu4zzfHIKk8teKhvwIijWvyYVs_kePzPKYds3LmbdSVQONfXWk61Cwb63FIgzAwBEBnDC-dY/s1600/10v4.png"
     },
     {
         "pergunta": "Quem descobriu o Brasil?",
-        "alternativas": ["Pedro Álvares Cabral", "Cristóvão Colombo", "Dom Pedro I", "Vasco da Gama"],
+        "alternativas": [
+            "Pedro Álvares Cabral",
+            "Cristóvão Colombo",
+            "Dom Pedro I",
+            "Vasco da Gama"
+        ],
         "correta": 0,
         "categoria": "História",
-         "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrOIXqBPnvj-TbNIyciADIvziFvtmkqCa5tDrn8q4IkYJ2J4GayXiJPwsXOZn-HZdaLiggu4zzfHIKk8teKhvwIijWvyYVs_kePzPKYds3LmbdSVQONfXWk61Cwb63FIgzAwBEBnDC-dY/s1600/10v4.png"
+        "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrOIXqBPnvj-TbNIyciADIvziFvtmkqCa5tDrn8q4IkYJ2J4GayXiJPwsXOZn-HZdaLiggu4zzfHIKk8teKhvwIijWvyYVs_kePzPKYds3LmbdSVQONfXWk61Cwb63FIgzAwBEBnDC-dY/s1600/10v4.png"
     },
     {
         "pergunta": "Qual a capital da França?",
-        "alternativas": ["Londres", "Paris", "Berlim", "Madri"],
+        "alternativas": [
+            "Londres",
+            "Paris",
+            "Berlim",
+            "Madri"
+        ],
         "correta": 1,
         "categoria": "Geografia",
-         "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrOIXqBPnvj-TbNIyciADIvziFvtmkqCa5tDrn8q4IkYJ2J4GayXiJPwsXOZn-HZdaLiggu4zzfHIKk8teKhvwIijWvyYVs_kePzPKYds3LmbdSVQONfXWk61Cwb63FIgzAwBEBnDC-dY/s1600/10v4.png"
+        "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrOIXqBPnvj-TbNIyciADIvziFvtmkqCa5tDrn8q4IkYJ2J4GayXiJPwsXOZn-HZdaLiggu4zzfHIKk8teKhvwIijWvyYVs_kePzPKYds3LmbdSVQONfXWk61Cwb63FIgzAwBEBnDC-dY/s1600/10v4.png"
     }
 ]
