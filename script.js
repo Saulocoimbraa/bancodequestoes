@@ -55,4 +55,3 @@ function filtrarQuestoes() {
     let categoriaSelecionada = document.getElementById("filtro").value;
     mostrarQuestoes(categoriaSelecionada);
 }
-
