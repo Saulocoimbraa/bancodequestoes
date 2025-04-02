@@ -3,11 +3,12 @@
         "enunciado": "Geometria $\\frac{1}{2} + \\frac{1}{3}$",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "tipo": "imagem",
         "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
+            "imagens/suporte1.png",
+            "imagens/suporte1.png",
+            "imagens/suporte1.png",
+            "imagens/suporte1.png"
         ],
         "correta": 2,
         "categoria": "Geo"
