@@ -31,7 +31,7 @@ function mostrarQuestoes(categoria) {
             div.innerHTML += `<img src="${questao.imagem}" alt="Imagem da questão" style="max-width: 100%; height: auto; margin-top: 10px;">`;
        }
        //comando
-        div.innerHTML += `<p>${questao.comando}</p>`;
+        document.getElementById("comando").innerText = questao.comando;
     
 
         // Criamos uma div para exibir o resultado da resposta
