@@ -10,7 +10,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "geo"
+        "categoria": "Geo"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
@@ -23,7 +23,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "nu_op"
+        "categoria": "Nu_Op"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
