@@ -134,4 +134,17 @@ function mostrarQuestoes(categoria) {
         confirmarBotao.className = "confirmar-btn";
         confirmarBotao.onclick = function () {
             if (alternativaSelecionada === null) {
-                resultadoDiv.inner
+                resultadoDiv.innerHTML = "⚠️ Selecione uma alternativa antes de confirmar!";
+                resultadoDiv.style.color = "orange";
+                return;
+            }
+            verificarResposta(index, alternativaSelecionada, resultadoDiv.id);
+        };
+
+        div.appendChild(alternativasDiv);
+        div.appendChild(confirmarBotao);
+        div.appendChild(resultadoDiv);
+
+        quizContainer.appendChild(div);
+    });
+}
