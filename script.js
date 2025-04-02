@@ -1,15 +1,3 @@
-let todasQuestoes = [];
-
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("questoes.json")
-        .then(response => response.json())
-        .then(data => {
-            todasQuestoes = data;
-            mostrarQuestoes("Todas");
-        })
-        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
-});
-
 function mostrarQuestoes(categoria) {
     let quizContainer = document.getElementById("quiz");
     quizContainer.innerHTML = "";
@@ -22,7 +10,7 @@ function mostrarQuestoes(categoria) {
         let div = document.createElement("div");
         div.className = "question";
 
-        // Enunciado com LaTeX
+        // Enunciado
         if (questao.enunciado) {
             let enunciado = document.createElement("p");
             enunciado.innerHTML = questao.enunciado;
@@ -44,27 +32,36 @@ function mostrarQuestoes(categoria) {
             div.appendChild(comando);
         }
 
-        // Alternativas
+        // Criar div de alternativas
         let alternativasDiv = document.createElement("div");
-        alternativasDiv.className = "alternativas";
+        alternativasDiv.className = questao.tipo === "imagem" ? "alternativas-imagem" : "alternativas";
 
         let alternativaSelecionada = null;
 
         questao.alternativas.forEach((alt, i) => {
             let botao = document.createElement("button");
-            botao.innerHTML = alt; // Suporta expressões LaTeX
             botao.className = "alternativa-btn";
             botao.onclick = function () {
                 let botoes = alternativasDiv.querySelectorAll(".alternativa-btn");
                 botoes.forEach(b => b.classList.remove("selecionado"));
-
                 botao.classList.add("selecionado");
                 alternativaSelecionada = i;
             };
+
+            // Verifica se a alternativa é uma imagem
+            if (questao.tipo === "imagem") {
+                let img = document.createElement("img");
+                img.src = alt;
+                img.alt = `Alternativa ${i + 1}`;
+                botao.appendChild(img);
+            } else {
+                botao.innerHTML = alt;
+            }
+
             alternativasDiv.appendChild(botao);
         });
 
-        // Botão de confirmar
+        // Botão de confirmar resposta
         let confirmarBotao = document.createElement("button");
         confirmarBotao.innerText = "Confirmar";
         confirmarBotao.className = "confirmar-btn";
@@ -87,27 +84,5 @@ function mostrarQuestoes(categoria) {
         div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
     });
-
-    // Atualiza a renderização de LaTeX
-    if (window.MathJax) {
-        MathJax.typeset();
-    }
 }
 
-function verificarResposta(questaoIndex, respostaIndex, resultadoId) {
-    let questao = todasQuestoes[questaoIndex];
-    let resultadoDiv = document.getElementById(resultadoId);
-
-    if (questao.correta === respostaIndex) {
-        resultadoDiv.innerHTML = "✅ Resposta correta!";
-        resultadoDiv.style.color = "green";
-    } else {
-        resultadoDiv.innerHTML = "❌ Resposta errada!";
-        resultadoDiv.style.color = "red";
-    }
-}
-
-function filtrarQuestoes() {
-    let categoriaSelecionada = document.getElementById("filtro").value;
-    mostrarQuestoes(categoriaSelecionada);
-}
