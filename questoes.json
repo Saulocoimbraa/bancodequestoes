@@ -1,13 +1,13 @@
 [
     {
-        "pergunta": "Qual é o resultado de 2 + 2?",
+        "pergunta": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
-            "3",
-            "4",
-            "5",
-            "6"
+            "16",
+            "96",
+            "104",
+            "200"
         ],
-        "correta": 1,
+        "correta": 2,
         "categoria": "Matemática",
         "imagem": "imagens/suporte1.jpg"
     },
