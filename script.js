@@ -26,6 +26,34 @@ function filtrarQuestoes() {
 function mostrarQuestoes(categoria) {
     console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
     console.log("Questões carregadas:", todasQuestoes);
+function verificarResposta(index, alternativaSelecionada, resultadoId) {
+    let questao = todasQuestoes[index];
+    let alternativaCorreta = questao.correta; // Obtém o índice da resposta correta
+
+    let resultadoDiv = document.getElementById(resultadoId);
+    let botoes = resultadoDiv.parentElement.querySelectorAll(".alternativa-btn");
+
+    // Remove a opção de selecionar outra alternativa
+    botoes.forEach((botao, i) => {
+        botao.disabled = true; // Desativa os botões após a confirmação
+
+        if (i === alternativaCorreta) {
+            botao.classList.add("correto"); // Destaca a resposta certa (verde)
+        }
+        if (i === alternativaSelecionada && i !== alternativaCorreta) {
+            botao.classList.add("errado"); // Destaca a resposta errada (vermelho)
+        }
+    });
+
+    // Exibe o feedback abaixo da questão
+    if (alternativaSelecionada === alternativaCorreta) {
+        resultadoDiv.innerHTML = "✅ Resposta correta!";
+        resultadoDiv.style.color = "green";
+    } else {
+        resultadoDiv.innerHTML = `❌ Resposta errada! A correta era a alternativa ${alternativaCorreta + 1}.`;
+        resultadoDiv.style.color = "red";
+    }
+}
 
     let quizContainer = document.getElementById("quiz");
     quizContainer.innerHTML = ""; // Limpa a área de questões
