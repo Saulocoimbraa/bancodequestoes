@@ -1,7 +1,7 @@
 [
     {
-        "pergunta": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "imagem": "imagens/suporte1.jpg",
+        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
             "16",
@@ -11,10 +11,11 @@
         ],
         "correta": 2,
         "categoria": "Matemática"
-       
     },
     {
-        "pergunta": "Quem descobriu o Brasil?",
+        "enunciado": "Quem descobriu o Brasil?",
+        "suporte": null,
+        "comando": "Selecione a alternativa correta:",
         "alternativas": [
             "Pedro Álvares Cabral",
             "Cristóvão Colombo",
@@ -22,11 +23,12 @@
             "Vasco da Gama"
         ],
         "correta": 0,
-        "categoria": "História",
-        "imagem": ""
+        "categoria": "História"
     },
     {
-        "pergunta": "Qual a capital da França?",
+        "enunciado": "Qual a capital da França?",
+        "suporte": null,
+        "comando": "Escolha a resposta correta:",
         "alternativas": [
             "Londres",
             "Paris",
@@ -34,7 +36,6 @@
             "Madri"
         ],
         "correta": 1,
-        "categoria": "Álgebra",
-        "imagem": ""
+        "categoria": "Geografia"
     }
 ]
