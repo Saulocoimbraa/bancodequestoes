@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("questoes.json")
         .then(response => response.json())
         .then(data => {
-            console.log('Dados carregados:', data);
             todasQuestoes = data;
             mostrarQuestoes("Todas"); // Exibe todas por padrão
         })
@@ -33,9 +32,6 @@ function mostrarQuestoes(categoria) {
             let img = document.createElement("img");
             img.src = questao.suporte;
             img.alt = "Imagem da questão";
-            img.style.maxWidth = "100%";
-            img.style.height = "auto";
-            img.style.marginTop = "10px";
             div.appendChild(img);
         }
 
@@ -56,17 +52,39 @@ function mostrarQuestoes(categoria) {
         resultadoDiv.style.fontWeight = "bold";
 
         // Criar botões de alternativas dinamicamente
+        let alternativaSelecionada = null; // Guarda a alternativa escolhida
+
         questao.alternativas.forEach((alt, i) => {
             let botao = document.createElement("button");
             botao.innerText = alt;
+            botao.className = "alternativa-btn";
             botao.onclick = function () {
-                verificarResposta(index, i, resultadoDiv.id);
+                // Remove seleção de outros botões
+                let botoes = alternativasDiv.querySelectorAll(".alternativa-btn");
+                botoes.forEach(b => b.classList.remove("selecionado"));
+
+                // Marca o botão clicado
+                botao.classList.add("selecionado");
+                alternativaSelecionada = i; // Armazena o índice da alternativa escolhida
             };
             alternativasDiv.appendChild(botao);
         });
 
-        // Adiciona tudo na questão
+        // Criar botão de confirmar resposta
+        let confirmarBotao = document.createElement("button");
+        confirmarBotao.innerText = "Confirmar";
+        confirmarBotao.className = "confirmar-btn";
+        confirmarBotao.onclick = function () {
+            if (alternativaSelecionada === null) {
+                resultadoDiv.innerHTML = "⚠️ Selecione uma alternativa antes de confirmar!";
+                resultadoDiv.style.color = "orange";
+            } else {
+                verificarResposta(index, alternativaSelecionada, resultadoDiv.id);
+            }
+        };
+
         div.appendChild(alternativasDiv);
+        div.appendChild(confirmarBotao);
         div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
     });
