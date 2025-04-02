@@ -84,6 +84,6 @@ function mostrarQuestoes(categoria) {
         div.appendChild(confirmarBotao);
         div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
-    });
+    };
 }
 
