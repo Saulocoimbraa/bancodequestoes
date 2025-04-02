@@ -22,33 +22,47 @@
             max-width: 600px;
         }
 
-        .alternativas {
-            display: flex;
-            flex-direction: column; /* Coloca um botão abaixo do outro */
-            gap: 10px; /* Espaçamento entre os botões */
-            margin-top: 10px;
-            }
+       .alternativas {
+    display: flex;
+    flex-direction: column; /* Coloca um botão abaixo do outro */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 10px;
+}
 
-        button {
-            width: 100%; /* Faz os botões ocuparem toda a largura do container */
-            padding: 10px;
-            border: 1px solid #007BFF;
-            background-color: #007BFF;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-align: left;
-        }
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
+button:hover {
+    background-color: #0056b3;
+}
 
-        button:active {
-            background-color: #004099;
-        }
+button:active {
+    background-color: #004099;
+}
+
+.alternativa-btn.selecionado {
+    background-color: #34c759 !important;
+    border-color: #28a745;
+}
+
+.confirmar-btn {
+    margin-top: 10px;
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+.confirmar-btn:hover {
+    background-color: #e68900;
+}
 
         .feedback {
             font-weight: bold;
