@@ -1,4 +1,12 @@
 let todasQuestoes = []; // Declara a variável globalmente
+fetch("questoes.json") // Substitua pelo caminho correto do JSON
+    .then(response => response.json())
+    .then(data => {
+        todasQuestoes = data; // Preenche o array global
+        console.log("Questões carregadas:", todasQuestoes);
+        mostrarQuestoes("Todas"); // Agora chamamos a função com os dados prontos
+    })
+    .catch(error => console.error("Erro ao carregar JSON:", error));
 
 function mostrarQuestoes(categoria) {
     console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
