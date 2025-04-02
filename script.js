@@ -7,6 +7,11 @@ fetch("questoes.json") // Substitua pelo caminho correto do JSON
         mostrarQuestoes("Todas"); // Agora chamamos a função com os dados prontos
     })
     .catch(error => console.error("Erro ao carregar JSON:", error));
+function filtrarQuestoes() {
+    let categoriaSelecionada = document.getElementById("filtro").value;
+    console.log("Categoria selecionada:", categoriaSelecionada);
+    mostrarQuestoes(categoriaSelecionada);
+}
 
 function mostrarQuestoes(categoria) {
     console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
