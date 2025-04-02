@@ -96,5 +96,4 @@ function mostrarQuestoes(categoria) {
     if (window.MathJax) {
         MathJax.typeset();
     }
-}
-}
+} 
