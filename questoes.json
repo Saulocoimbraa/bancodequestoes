@@ -4,10 +4,10 @@
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
+            "A) 16",
+            "B) 96",
+            "C) 104",
+            "D) 200"
         ],
         "correta": 2,
         "categoria": "Matemática"
