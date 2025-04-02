@@ -5,10 +5,10 @@
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "tipo": "imagem",
         "alternativas": [
-            "imagens/alternativa1.png",
-            "imagens/alternativa2.png",
-            "imagens/alternativa3.png",
-            "imagens/alternativa4.png"
+            "imagens/alternativa1.jpg",
+            "imagens/alternativa2.jpg",
+            "imagens/alternativa3.jpg",
+            "imagens/alternativa4.jpg"
         ],
         "correta": 2,
         "categoria": "Geo"
