@@ -22,7 +22,31 @@
             background-color: #f8f9fa;
             padding: 20px;
         }
+.alternativas-imagem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.alternativas-imagem button {
+    width: 45%; /* Para que duas imagens caibam na mesma linha */
+    padding: 5px;
+    border: 1px solid #007BFF;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 
+.alternativas-imagem button img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.alternativas-imagem button:hover {
+    transform: scale(1.05);
+}
         .question {
             margin: 20px auto;
             padding: 15px;
