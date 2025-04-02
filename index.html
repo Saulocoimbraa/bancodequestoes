@@ -27,6 +27,32 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            .alternativas {
+    display: flex;
+    flex-direction: column; /* Coloca um botão abaixo do outro */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 10px;
+}
+
+button {
+    width: 100%; /* Faz os botões ocuparem toda a largura do container */
+    padding: 10px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004099;
+}
         }
     </style>
 </head>
