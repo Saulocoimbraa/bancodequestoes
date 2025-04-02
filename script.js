@@ -1,18 +1,28 @@
 let todasQuestoes = []; // Declara a variável globalmente
-fetch("questoes.json") // Substitua pelo caminho correto do JSON
+
+// Carrega o JSON com as questões
+fetch("questoes.json") // Certifique-se de que o caminho está correto
     .then(response => response.json())
     .then(data => {
-        todasQuestoes = data; // Preenche o array global
+        todasQuestoes = data; // Preenche a variável global
         console.log("Questões carregadas:", todasQuestoes);
-        mostrarQuestoes("Todas"); // Agora chamamos a função com os dados prontos
+
+        if (todasQuestoes.length > 0) {
+            mostrarQuestoes("Todas"); // Chama a função apenas se houver questões
+        } else {
+            console.error("Nenhuma questão encontrada no JSON!");
+        }
     })
     .catch(error => console.error("Erro ao carregar JSON:", error));
+
+// Função para filtrar e exibir as questões com base na categoria
 function filtrarQuestoes() {
     let categoriaSelecionada = document.getElementById("filtro").value;
     console.log("Categoria selecionada:", categoriaSelecionada);
     mostrarQuestoes(categoriaSelecionada);
 }
 
+// Função para exibir as questões
 function mostrarQuestoes(categoria) {
     console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
     console.log("Questões carregadas:", todasQuestoes);
@@ -85,30 +95,4 @@ function mostrarQuestoes(categoria) {
 
         // Botão de confirmar resposta
         let resultadoDiv = document.createElement("div");
-        resultadoDiv.id = `resultado-${index}`;
-        resultadoDiv.style.marginTop = "10px";
-        resultadoDiv.style.fontWeight = "bold";
-
-        let confirmarBotao = document.createElement("button");
-        confirmarBotao.innerText = "Confirmar";
-        confirmarBotao.className = "confirmar-btn";
-        confirmarBotao.onclick = function () {
-            if (alternativaSelecionada === null) {
-                resultadoDiv.innerHTML = "⚠️ Selecione uma alternativa antes de confirmar!";
-                resultadoDiv.style.color = "orange";
-            } else {
-                verificarResposta(index, alternativaSelecionada, resultadoDiv.id);
-            }
-        };
-
-        div.appendChild(alternativasDiv);
-        div.appendChild(confirmarBotao);
-        div.appendChild(resultadoDiv);
-        quizContainer.appendChild(div);
-    });
-
-    // Atualiza MathJax para LaTeX (se estiver ativado)
-    if (window.MathJax) {
-        MathJax.typeset();
-    }
-} 
+        resultadoDiv.id = `resultado-${index
