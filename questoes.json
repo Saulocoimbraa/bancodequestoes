@@ -10,7 +10,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "Matemática"
+        "categoria": "geo"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
@@ -23,7 +23,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "Matemática"
+        "categoria": "nu_op"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
@@ -36,7 +36,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "Matemática"
+        "categoria": "Es_Pr"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
@@ -49,7 +49,7 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "Matemática"
+        "categoria": "Al_Fu"
     },
 {
         "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
@@ -62,110 +62,6 @@
             "200"
         ],
         "correta": 2,
-        "categoria": "Matemática"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "Matemática"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "Matemática"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "Matemática"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "História"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "História"
-    },
-{
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
-        "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
-        ],
-        "correta": 2,
-        "categoria": "Matemática"
-    },
-    {
-        "enunciado": "Quem descobriu o Brasil?",
-        "suporte": "",
-        "comando": "Escolha a resposta correta.",
-        "alternativas": [
-            "Pedro Álvares Cabral",
-            "Cristóvão Colombo",
-            "Dom Pedro I",
-            "Vasco da Gama"
-        ],
-        "correta": 0,
-        "categoria": "História"
-    },
-    {
-        "enunciado": "Qual a capital da França?",
-        "suporte": "",
-        "comando": "Selecione a cidade correta.",
-        "alternativas": [
-            "Londres",
-            "Paris",
-            "Berlim",
-            "Madri"
-        ],
-        "correta": 1,
-        "categoria": "Geografia"
+        "categoria": "Gr_Me"
     }
 ]
