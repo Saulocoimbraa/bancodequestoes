@@ -22,12 +22,14 @@ function mostrarQuestoes(categoria) {
         let div = document.createElement("div");
         div.className = "question";
 
-        // Adiciona o enunciado
-        let enunciado = document.createElement("p");
-        enunciado.innerText = questao.enunciado;
-        div.appendChild(enunciado);
+        // Adiciona o enunciado (se existir)
+        if (questao.enunciado) {
+            let enunciado = document.createElement("p");
+            enunciado.innerHTML = questao.enunciado; // Permite formatação com LaTeX
+            div.appendChild(enunciado);
+        }
 
-        // Verifica se há imagem (suporte)
+        // Verifica se há imagem (suporte) e adiciona
         if (questao.suporte) {
             let img = document.createElement("img");
             img.src = questao.suporte;
@@ -35,11 +37,12 @@ function mostrarQuestoes(categoria) {
             div.appendChild(img);
         }
 
-        // Adiciona o comando
-        let comando = document.createElement("p");
-        comando.innerText = questao.comando;
-        comando.style.fontWeight = "bold";
-        div.appendChild(comando);
+        // Adiciona o comando (se existir)
+        if (questao.comando) {
+            let comando = document.createElement("p");
+            comando.innerHTML = `<strong>${questao.comando}</strong>`;
+            div.appendChild(comando);
+        }
 
         // Criar container para alternativas
         let alternativasDiv = document.createElement("div");
@@ -56,7 +59,7 @@ function mostrarQuestoes(categoria) {
 
         questao.alternativas.forEach((alt, i) => {
             let botao = document.createElement("button");
-            botao.innerText = alt;
+            botao.innerHTML = alt; // Permite expressões LaTeX
             botao.className = "alternativa-btn";
             botao.onclick = function () {
                 // Remove seleção de outros botões
@@ -88,6 +91,11 @@ function mostrarQuestoes(categoria) {
         div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
     });
+
+    // Se o MathJax estiver presente, renderiza expressões LaTeX
+    if (window.MathJax) {
+        MathJax.typeset();
+    }
 }
 
 function verificarResposta(questaoIndex, respostaIndex, resultadoId) {
