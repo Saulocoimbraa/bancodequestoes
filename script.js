@@ -1,3 +1,5 @@
+let todasQuestoes = []; // Declara a variável globalmente
+
 function mostrarQuestoes(categoria) {
     console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
     console.log("Questões carregadas:", todasQuestoes);
