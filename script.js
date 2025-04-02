@@ -29,9 +29,11 @@ function mostrarQuestoes(categoria) {
         // Verifica se há uma imagem para mostrar
         if (questao.imagem) {
             div.innerHTML += `<img src="${questao.imagem}" alt="Imagem da questão" style="max-width: 100%; height: auto; margin-top: 10px;">`;
-        div.innerHTML = `<p>${questao.comando}</p>`;
+       }
+        //exibir comando
+        if (questao.comando) {
+        div.innerHTML += `<p>${questao.comando}</p>`
         }
-
         // Criamos uma div para exibir o resultado da resposta
         let resultadoDiv = document.createElement("div");
         resultadoDiv.id = `resultado-${index}`;
