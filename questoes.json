@@ -1,8 +1,8 @@
 [
     {
-        "enunciado": "Geometria $\\frac{1}{2} + \\frac{1}{3}$",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "enunciado": "Geometria: Resolva a soma $\\\\frac{1}{2} + \\\\frac{1}{3}$",
+        "suporte": "imagens/geometria.jpg",
+        "comando": "Escolha a alternativa correta.",
         "tipo": "imagem",
         "alternativas": [
             "imagens/alternativa1.jpg",
@@ -14,9 +14,9 @@
         "categoria": "Geo"
     },
     {
-        "enunciado": "Números e Operações",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "enunciado": "Números e Operações: Qual o resultado de 8 × 12?",
+        "suporte": "imagens/numeros.jpg",
+        "comando": "Escolha a alternativa correta.",
         "tipo": "texto",
         "alternativas": [
             "16",
@@ -28,43 +28,43 @@
         "categoria": "Nu_Op"
     },
     {
-        "enunciado": "Estatística",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "enunciado": "Estatística: Qual a moda no conjunto {4, 6, 8, 6, 9, 6, 10}?",
+        "suporte": "imagens/estatistica.jpg",
+        "comando": "Escolha a alternativa correta.",
         "tipo": "texto",
         "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
+            "4",
+            "6",
+            "8",
+            "10"
         ],
-        "correta": 2,
+        "correta": 1,
         "categoria": "Es_Pr"
     },
     {
-        "enunciado": "Álgebra",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "enunciado": "Álgebra: Se x + 5 = 12, qual é o valor de x?",
+        "suporte": "imagens/algebra.jpg",
+        "comando": "Escolha a alternativa correta.",
         "tipo": "texto",
         "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
+            "5",
+            "6",
+            "7",
+            "8"
         ],
         "correta": 2,
         "categoria": "Al_Fu"
     },
     {
-        "enunciado": "Grandezas e Medidas",
-        "suporte": "imagens/suporte1.jpg",
-        "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
+        "enunciado": "Grandezas e Medidas: Se um carro percorre 150 km em 3 horas, qual é sua velocidade média?",
+        "suporte": "imagens/velocidade.jpg",
+        "comando": "Escolha a alternativa correta.",
         "tipo": "texto",
         "alternativas": [
-            "16",
-            "96",
-            "104",
-            "200"
+            "30 km/h",
+            "40 km/h",
+            "50 km/h",
+            "60 km/h"
         ],
         "correta": 2,
         "categoria": "Gr_Me"
