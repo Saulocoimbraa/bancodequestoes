@@ -9,7 +9,12 @@ function mostrarQuestoes(categoria) {
         ? todasQuestoes
         : todasQuestoes.filter(q => q.categoria === categoria);
 
-    console.log("Questões filtradas:", questoesFiltradas); // Verifica se há questões para exibir
+    console.log("Questões filtradas:", questoesFiltradas);
+
+    // Loop para exibir cada questão
+    questoesFiltradas.forEach((questao, index) => {
+        let div = document.createElement("div");
+        div.className = "question";
 
         // Enunciado
         if (questao.enunciado) {
@@ -84,6 +89,10 @@ function mostrarQuestoes(categoria) {
         div.appendChild(confirmarBotao);
         div.appendChild(resultadoDiv);
         quizContainer.appendChild(div);
-    };
-}
+    });
 
+    // Atualiza MathJax para LaTeX (se estiver ativado)
+    if (window.MathJax) {
+        MathJax.typeset();
+    }
+}
