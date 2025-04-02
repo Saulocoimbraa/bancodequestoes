@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Questões</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+        label, input, textarea { display: block; width: 100%; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Cadastrar Questão</h2>
+    <form id="questionForm">
+        <label>Enunciado: <input type="text" id="enunciado"></label>
+        <label>Imagem (URL): <input type="text" id="suporte"></label>
+        <label>Comando: <input type="text" id="comando"></label>
+        <label>Alternativa A: <input type="text" id="altA"></label>
+        <label>Alternativa B: <input type="text" id="altB"></label>
+        <label>Alternativa C: <input type="text" id="altC"></label>
+        <label>Alternativa D: <input type="text" id="altD"></label>
+        <label>Correta (0=A, 1=B, 2=C, 3=D): <input type="number" id="correta" min="0" max="3"></label>
+        <label>Categoria: <input type="text" id="categoria"></label>
+        <button type="button" onclick="generateJSON()">Gerar JSON</button>
+    </form>
+    <h3>Resultado:</h3>
+    <textarea id="output" rows="10" readonly></textarea>
+    <button onclick="downloadJSON()">Baixar JSON</button>
+
+    <script>
+        function generateJSON() {
+            const question = {
+                enunciado: document.getElementById('enunciado').value,
+                suporte: document.getElementById('suporte').value,
+                comando: document.getElementById('comando').value,
+                alternativas: [
+                    document.getElementById('altA').value,
+                    document.getElementById('altB').value,
+                    document.getElementById('altC').value,
+                    document.getElementById('altD').value
+                ],
+                correta: parseInt(document.getElementById('correta').value),
+                categoria: document.getElementById('categoria').value
+            };
+            document.getElementById('output').value = JSON.stringify(question, null, 4);
+        }
+
+        function downloadJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(document.getElementById('output').value);
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "questao.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            document.body.removeChild(downloadAnchor);
+        }
+    </script>
+</body>
+</html>
