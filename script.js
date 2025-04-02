@@ -1,14 +1,15 @@
 function mostrarQuestoes(categoria) {
+    console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
+    console.log("Questões carregadas:", todasQuestoes);
+
     let quizContainer = document.getElementById("quiz");
-    quizContainer.innerHTML = "";
+    quizContainer.innerHTML = ""; // Limpa a área de questões
 
     let questoesFiltradas = categoria === "Todas"
         ? todasQuestoes
         : todasQuestoes.filter(q => q.categoria === categoria);
 
-    questoesFiltradas.forEach((questao, index) => {
-        let div = document.createElement("div");
-        div.className = "question";
+    console.log("Questões filtradas:", questoesFiltradas); // Verifica se há questões para exibir
 
         // Enunciado
         if (questao.enunciado) {
