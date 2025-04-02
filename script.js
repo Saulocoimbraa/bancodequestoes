@@ -39,8 +39,9 @@ function mostrarQuestoes(categoria) {
         }
 
         // Criar div de alternativas
+        let tipoQuestao = questao.tipo || "texto"; // Se "tipo" não existir, assume "texto"
         let alternativasDiv = document.createElement("div");
-        alternativasDiv.className = questao.tipo === "imagem" ? "alternativas-imagem" : "alternativas";
+        alternativasDiv.className = tipoQuestao === "imagem" ? "alternativas-imagem" : "alternativas";
 
         let alternativaSelecionada = null;
 
@@ -55,7 +56,7 @@ function mostrarQuestoes(categoria) {
             };
 
             // Verifica se a alternativa é uma imagem
-            if (questao.tipo === "imagem") {
+            if (tipoQuestao === "imagem") {
                 let img = document.createElement("img");
                 img.src = alt;
                 img.alt = `Alternativa ${i + 1}`;
@@ -68,6 +69,11 @@ function mostrarQuestoes(categoria) {
         });
 
         // Botão de confirmar resposta
+        let resultadoDiv = document.createElement("div");
+        resultadoDiv.id = `resultado-${index}`;
+        resultadoDiv.style.marginTop = "10px";
+        resultadoDiv.style.fontWeight = "bold";
+
         let confirmarBotao = document.createElement("button");
         confirmarBotao.innerText = "Confirmar";
         confirmarBotao.className = "confirmar-btn";
@@ -80,11 +86,6 @@ function mostrarQuestoes(categoria) {
             }
         };
 
-        let resultadoDiv = document.createElement("div");
-        resultadoDiv.id = `resultado-${index}`;
-        resultadoDiv.style.marginTop = "10px";
-        resultadoDiv.style.fontWeight = "bold";
-
         div.appendChild(alternativasDiv);
         div.appendChild(confirmarBotao);
         div.appendChild(resultadoDiv);
@@ -95,4 +96,4 @@ function mostrarQuestoes(categoria) {
     if (window.MathJax) {
         MathJax.typeset();
     }
-
+}
