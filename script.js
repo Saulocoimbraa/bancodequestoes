@@ -44,7 +44,6 @@ function mostrarQuestoes(categoria) {
         // Adiciona o comando da questão
         let comando = document.createElement("p");
         comando.innerText = questao.comando;
-        comando.style.fontWeight = "bold";
         div.appendChild(comando);
 
         // Criamos uma div para exibir o resultado da resposta
