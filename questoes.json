@@ -14,8 +14,8 @@
     },
     {
         "enunciado": "Quem descobriu o Brasil?",
-        "suporte": null,
-        "comando": "Selecione a alternativa correta:",
+        "suporte": "",
+        "comando": "Escolha a resposta correta.",
         "alternativas": [
             "Pedro Álvares Cabral",
             "Cristóvão Colombo",
@@ -27,8 +27,8 @@
     },
     {
         "enunciado": "Qual a capital da França?",
-        "suporte": null,
-        "comando": "Escolha a resposta correta:",
+        "suporte": "",
+        "comando": "Selecione a cidade correta.",
         "alternativas": [
             "Londres",
             "Paris",
