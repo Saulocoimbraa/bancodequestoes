@@ -97,3 +97,4 @@ function mostrarQuestoes(categoria) {
         MathJax.typeset();
     }
 }
+}
