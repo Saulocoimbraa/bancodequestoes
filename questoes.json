@@ -1,6 +1,6 @@
 [
     {
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "enunciado": "Geometria",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
@@ -13,7 +13,7 @@
         "categoria": "Geo"
     },
 {
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "enunciado": "Números e Operações",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
@@ -26,7 +26,7 @@
         "categoria": "Nu_Op"
     },
 {
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "enunciado": "Estatistica",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
@@ -39,7 +39,7 @@
         "categoria": "Es_Pr"
     },
 {
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "enunciado": "Álgebra",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
@@ -52,7 +52,7 @@
         "categoria": "Al_Fu"
     },
 {
-        "enunciado": "Carlos comprou um terreno retangular cujas medidas estão representadas no desenho abaixo e, no centro dele, construiu uma casa de base também retangular medindo 6 metros de largura por 16 metros de comprimento. Ao redor da casa, ele plantou grama de forma a cobrir todo espaço que sobrou do terreno.",
+        "enunciado": "Grandezas e Medidas",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Quantos metros quadrados de grama Carlos plantou nesse terreno?",
         "alternativas": [
