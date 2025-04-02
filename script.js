@@ -1,38 +1,51 @@
 let todasQuestoes = [];
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     fetch("questoes.json")
         .then(response => response.json())
         .then(data => {
-            console.log('Dados carregados:', data); // Adicionando log para ver os dados carregados
-            todasQuestoes = data; // Armazena todas as questões
+            console.log('Dados carregados:', data);
+            todasQuestoes = data;
             mostrarQuestoes("Todas"); // Exibe todas por padrão
         })
-        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error)); // Captura qualquer erro
+        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
 });
 
 function mostrarQuestoes(categoria) {
     let quizContainer = document.getElementById("quiz");
     quizContainer.innerHTML = ""; // Limpa a área de questões
 
-    let questoesFiltradas = categoria === "Todas" 
-        ? todasQuestoes 
+    let questoesFiltradas = categoria === "Todas"
+        ? todasQuestoes
         : todasQuestoes.filter(q => q.categoria === categoria);
 
-    console.log('Questões filtradas:', questoesFiltradas); // Adicionando log para ver as questões filtradas
+    console.log('Questões filtradas:', questoesFiltradas);
 
     questoesFiltradas.forEach((questao, index) => {
         let div = document.createElement("div");
         div.className = "question";
-        div.innerHTML = `<p>${questao.pergunta}</p>`;
 
-        // Verifica se há uma imagem para mostrar
-        if (questao.imagem) {
-            div.innerHTML += `<img src="${questao.imagem}" alt="Imagem da questão" style="max-width: 100%; height: auto; margin-top: 10px;">`;
-       }
-       //comando
-        document.getElementById("comando").innerText = questao.comando;
-    
+        // Adiciona o enunciado
+        let enunciado = document.createElement("p");
+        enunciado.innerText = questao.enunciado;
+        div.appendChild(enunciado);
+
+        // Verifica se há imagem (suporte) antes de exibir
+        if (questao.suporte) {
+            let img = document.createElement("img");
+            img.src = questao.suporte;
+            img.alt = "Imagem da questão";
+            img.style.maxWidth = "100%";
+            img.style.height = "auto";
+            img.style.marginTop = "10px";
+            div.appendChild(img);
+        }
+
+        // Adiciona o comando da questão
+        let comando = document.createElement("p");
+        comando.innerText = questao.comando;
+        comando.style.fontWeight = "bold";
+        div.appendChild(comando);
 
         // Criamos uma div para exibir o resultado da resposta
         let resultadoDiv = document.createElement("div");
@@ -40,8 +53,15 @@ function mostrarQuestoes(categoria) {
         resultadoDiv.style.marginTop = "10px";
         resultadoDiv.style.fontWeight = "bold";
 
+        // Criar botões de alternativas dinamicamente
         questao.alternativas.forEach((alt, i) => {
-            div.innerHTML += `<button onclick="verificarResposta(${index}, ${i}, '${resultadoDiv.id}')">${alt}</button> `;
+            let botao = document.createElement("button");
+            botao.innerText = alt;
+            botao.onclick = () => verificarResposta(index, i, resultadoDiv.id);
+            botao.style.margin = "5px";
+            botao.style.padding = "10px";
+            botao.style.borderRadius = "5px";
+            div.appendChild(botao);
         });
 
         div.appendChild(resultadoDiv);
@@ -53,7 +73,6 @@ function verificarResposta(questaoIndex, respostaIndex, resultadoId) {
     let questao = todasQuestoes[questaoIndex];
     let resultadoDiv = document.getElementById(resultadoId);
 
-    // Atualiza o feedback sem pop-up
     if (questao.correta === respostaIndex) {
         resultadoDiv.innerHTML = "✅ Resposta correta!";
         resultadoDiv.style.color = "green";
