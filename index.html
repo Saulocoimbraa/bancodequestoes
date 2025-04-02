@@ -5,54 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Questões</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .question { 
-            margin: 20px auto; 
-            padding: 10px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            text-align: justify; 
-            width: 600px;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
         }
-        .feedback { font-weight: bold; margin-top: 10px; }
-        img { 
-            max-width: 100%; 
-            height: auto; 
-            margin: 10px auto; 
-            display: block; 
-        }
-        #quiz {
-            margin-top: 20px;
+
+        .question {
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             text-align: left;
+            background-color: white;
+            max-width: 600px;
+        }
+
+        .alternativas {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            .alternativas {
-    display: flex;
-    flex-direction: column; /* Coloca um botão abaixo do outro */
-    gap: 10px; /* Espaçamento entre os botões */
-    margin-top: 10px;
-}
+            flex-direction: column; /* Coloca um botão abaixo do outro */
+            gap: 10px; /* Espaçamento entre os botões */
+            margin-top: 10px;
+        }
 
-button {
-    width: 100%; /* Faz os botões ocuparem toda a largura do container */
-    padding: 10px;
-    border: 1px solid #007BFF;
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+        button {
+            width: 100%; /* Faz os botões ocuparem toda a largura do container */
+            padding: 10px;
+            border: 1px solid #007BFF;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-button:hover {
-    background-color: #0056b3;
-}
+        button:hover {
+            background-color: #0056b3;
+        }
 
-button:active {
-    background-color: #004099;
-}
+        button:active {
+            background-color: #004099;
+        }
+
+        .feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            display: block;
+            margin-bottom: 20px;
         }
     </style>
 </head>
