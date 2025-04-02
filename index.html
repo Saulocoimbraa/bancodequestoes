@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Questões</title>
-
-    <!-- MathJax para exibir LaTeX -->
+    
+    <!-- Biblioteca MathJax para renderizar LaTeX -->
     <script>
-        window.MathJax = {
+        MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
             svg: { fontCache: 'global' }
         };
     </script>
     <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
         body {
@@ -56,15 +56,6 @@
             background-color: #0056b3;
         }
 
-        button:active {
-            background-color: #004099;
-        }
-
-        .alternativa-btn.selecionado {
-            background-color: #34c759 !important;
-            border-color: #28a745;
-        }
-
         .confirmar-btn {
             margin-top: 10px;
             background-color: #ff9800;
@@ -85,14 +76,12 @@
             height: auto;
             margin-top: 10px;
             display: block;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Banco de Questões</h1>
 
-    <!-- Dropdown para selecionar categoria -->
     <label for="filtro">Escolha uma categoria:</label>
     <select id="filtro" onchange="filtrarQuestoes()">
         <option value="Todas">Todas</option>
