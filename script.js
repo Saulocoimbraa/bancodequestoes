@@ -22,10 +22,7 @@ function filtrarQuestoes() {
     mostrarQuestoes(categoriaSelecionada);
 }
 
-// Função para exibir as questões
-function mostrarQuestoes(categoria) {
-    console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
-    console.log("Questões carregadas:", todasQuestoes);
+// ✅ Função para verificar a resposta correta
 function verificarResposta(index, alternativaSelecionada, resultadoId) {
     let questao = todasQuestoes[index];
     let alternativaCorreta = questao.correta; // Obtém o índice da resposta correta
@@ -54,6 +51,11 @@ function verificarResposta(index, alternativaSelecionada, resultadoId) {
         resultadoDiv.style.color = "red";
     }
 }
+
+// ✅ Função para exibir as questões
+function mostrarQuestoes(categoria) {
+    console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
+    console.log("Questões carregadas:", todasQuestoes);
 
     let quizContainer = document.getElementById("quiz");
     quizContainer.innerHTML = ""; // Limpa a área de questões
@@ -123,4 +125,13 @@ function verificarResposta(index, alternativaSelecionada, resultadoId) {
 
         // Botão de confirmar resposta
         let resultadoDiv = document.createElement("div");
-        resultadoDiv.id = `resultado-${index
+        resultadoDiv.id = `resultado-${index}`;
+        resultadoDiv.style.marginTop = "10px";
+        resultadoDiv.style.fontWeight = "bold";
+
+        let confirmarBotao = document.createElement("button");
+        confirmarBotao.innerText = "Confirmar";
+        confirmarBotao.className = "confirmar-btn";
+        confirmarBotao.onclick = function () {
+            if (alternativaSelecionada === null) {
+                resultadoDiv.inner
