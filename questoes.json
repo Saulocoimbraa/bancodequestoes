@@ -1,6 +1,6 @@
 [
     {
-        "enunciado": "Geometria: Resolva a soma \\[x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.\\]",
+        "enunciado": "Geometria: Resolva a soma $\\[x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.\\]$",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Escolha a alternativa correta.",
         "tipo": "imagem",
