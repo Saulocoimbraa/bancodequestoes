@@ -15,7 +15,7 @@
     },
     {
         "enunciado": "Números e Operações: Qual o resultado de 8 × 12?",
-        "suporte": "imagens/numeros.jpg",
+        "suporte": "null",
         "comando": "Escolha a alternativa correta.",
         "tipo": "texto",
         "alternativas": [
