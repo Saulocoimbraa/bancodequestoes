@@ -1,6 +1,6 @@
 [
     {
-        "enunciado": "Geometria: Resolva a soma $\frac{1}{2} + \frac{1}{3}$",
+        "enunciado": "Geometria: Resolva a soma $\\frac{1}{2} + \\frac{1}{3}$",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Escolha a alternativa correta.",
         "tipo": "imagem",
