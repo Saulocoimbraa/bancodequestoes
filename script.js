@@ -136,4 +136,19 @@ function mostrarQuestoes(categoria) {
         confirmar.onclick = () => {
             if (alternativaSelecionada === null) {
                 resultadoDiv.innerText = "⚠️ Selecione uma alternativa!";
-                resultadoDiv.style.color = "
+                resultadoDiv.style.color = "orange";
+                return;
+            }
+            verificarResposta(index, alternativaSelecionada, resultadoDiv.id, confirmar);
+        };
+
+        // Monta a questão
+        div.appendChild(alternativasDiv);
+        div.appendChild(confirmar);
+        div.appendChild(resultadoDiv);
+
+        quizContainer.appendChild(div);
+    });
+
+    atualizarPontuacao(); // Atualiza pontuação ao mudar de categoria
+}
