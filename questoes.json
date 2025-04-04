@@ -1,5 +1,19 @@
 [
     {
+    "enunciado": "Em uma horta escolar, foram colhidos 48 tomates. Os estudantes organizaram os tomates em 6 caixas com a mesma quantidade.",
+    "suporte": "",
+    "comando": "Quantos tomates foram colocados em cada caixa?",
+    "tipo": "texto",
+    "alternativas": [
+        "6",
+        "8",
+        "10",
+        "12"
+    ],
+    "correta": 1,
+    "categoria": "Nu_Op"
+},
+    {
         "enunciado": "Geometria: Resolva a soma $x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$",
         "suporte": "imagens/suporte1.jpg",
         "comando": "Escolha a alternativa correta.",
