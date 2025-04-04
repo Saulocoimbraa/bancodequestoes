@@ -1,4 +1,18 @@
 [
+   {
+    "enunciado": "Durante um mês, uma família gastou R$ 350,00 com alimentação, R$ 120,00 com transporte e R$ 230,00 com contas de casa.",
+    "suporte": "",
+    "comando": "Qual foi o gasto total dessa família nesse mês?",
+    "tipo": "texto",
+    "alternativas": [
+        "R$ 600,00",
+        "R$ 700,00",
+        "R$ 800,00",
+        "R$ 900,00"
+    ],
+    "correta": 1,
+    "categoria": "Nu_Op"
+},
     {
     "enunciado": "Em uma horta escolar, foram colhidos 48 tomates. Os estudantes organizaram os tomates em 6 caixas com a mesma quantidade.",
     "suporte": "",
