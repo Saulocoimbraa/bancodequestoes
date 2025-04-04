@@ -6,20 +6,34 @@
     <title>Cadastro de Questões</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
-        label, input, textarea { display: block; width: 100%; margin-bottom: 10px; }
+        label, input, textarea, select { display: block; width: 100%; margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <h2>Cadastrar Questão</h2>
     <form id="questionForm">
         <label>Enunciado: <input type="text" id="enunciado"></label>
-        <label>Imagem (URL): <input type="text" id="suporte"></label>
+        <label>Imagem de Suporte (URL): <input type="text" id="suporte"></label>
         <label>Comando: <input type="text" id="comando"></label>
-        <label>Alternativa A: <input type="text" id="altA"></label>
-        <label>Alternativa B: <input type="text" id="altB"></label>
-        <label>Alternativa C: <input type="text" id="altC"></label>
-        <label>Alternativa D: <input type="text" id="altD"></label>
-        <label>Correta (0=A, 1=B, 2=C, 3=D): <input type="number" id="correta" min="0" max="3"></label>
+        <label>Tipo de Alternativas:
+            <select id="tipo">
+                <option value="texto">Texto</option>
+                <option value="imagem">Imagem</option>
+            </select>
+        </label>
+        <label>Alternativa A (URL ou texto): <input type="text" id="altA"></label>
+        <label>Alternativa B (URL ou texto): <input type="text" id="altB"></label>
+        <label>Alternativa C (URL ou texto): <input type="text" id="altC"></label>
+        <label>Alternativa D (URL ou texto): <input type="text" id="altD"></label>
+        <label>Correta:
+            <select id="correta">
+                <option value="0">A</option>
+                <option value="1">B</option>
+                <option value="2">C</option>
+                <option value="3">D</option>
+            </select>
+        </label>
+        <button type="button" onclick="confirmAnswer()">Confirmar Alternativa</button>
         <label>Categoria: <input type="text" id="categoria"></label>
         <button type="button" onclick="generateJSON()">Gerar JSON</button>
     </form>
@@ -28,11 +42,17 @@
     <button onclick="downloadJSON()">Baixar JSON</button>
 
     <script>
+        function confirmAnswer() {
+            const selectedOption = document.getElementById('correta');
+            alert("Alternativa confirmada: " + selectedOption.options[selectedOption.selectedIndex].text);
+        }
+
         function generateJSON() {
             const question = {
                 enunciado: document.getElementById('enunciado').value,
                 suporte: document.getElementById('suporte').value,
                 comando: document.getElementById('comando').value,
+                tipo: document.getElementById('tipo').value,
                 alternativas: [
                     document.getElementById('altA').value,
                     document.getElementById('altB').value,
