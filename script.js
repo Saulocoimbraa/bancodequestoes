@@ -1,4 +1,5 @@
-let todasQuestoes = []; // Declara a variável globalmente
+let todasQuestoes = []; // Armazena todas as questões carregadas
+let pontuacao = 0; // Pontuação inicial
 
 // Carrega o JSON com as questões
 fetch("questoes.json") // Certifique-se de que o caminho está correto
@@ -25,23 +26,33 @@ function filtrarQuestoes() {
 // ✅ Função para verificar a resposta correta
 function verificarResposta(index, alternativaSelecionada, resultadoId) {
     let questao = todasQuestoes[index];
-    let alternativaCorreta = questao.correta; // Obtém o índice da resposta correta
+    let alternativaCorreta = questao.correta;
 
     let resultadoDiv = document.getElementById(resultadoId);
     let botoes = resultadoDiv.parentElement.querySelectorAll(".alternativa-btn");
 
-    // Remove a opção de selecionar outra alternativa
     botoes.forEach((botao, i) => {
-        botao.disabled = true; // Desativa os botões após a confirmação
+        botao.disabled = true;
 
         if (i === alternativaCorreta) {
-            botao.classList.add("correto"); // Destaca a resposta certa (verde)
+            botao.classList.add("correto");
         }
         if (i === alternativaSelecionada && i !== alternativaCorreta) {
-            botao.classList.add("errado"); // Destaca a resposta errada (vermelho)
+            botao.classList.add("errado");
         }
     });
 
+    if (alternativaSelecionada === alternativaCorreta) {
+        pontuacao += 1;
+        resultadoDiv.innerHTML = "✅ Resposta correta!";
+        resultadoDiv.style.color = "green";
+    } else {
+        resultadoDiv.innerHTML = `❌ Resposta errada! A correta era a alternativa ${alternativaCorreta + 1}.`;
+        resultadoDiv.style.color = "red";
+    }
+
+    atualizarPontuacao();
+}
     // Exibe o feedback abaixo da questão
     if (alternativaSelecionada === alternativaCorreta) {
         resultadoDiv.innerHTML = "✅ Resposta correta!";
@@ -147,4 +158,8 @@ function mostrarQuestoes(categoria) {
 
         quizContainer.appendChild(div);
     });
+    function atualizarPontuacao() {
+    document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
+}
+
 }
