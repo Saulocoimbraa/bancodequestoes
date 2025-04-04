@@ -1,109 +1,131 @@
-let todasQuestoes = []; // Armazena todas as questões carregadas
-let pontuacao = 0; // Pontuação inicial
+let todasQuestoes = [];
+let pontuacao = 0;
 
-// Carrega o JSON com as questões
+// Carregar JSON
 fetch("questoes.json")
-    .then(response => response.json())
-    .then(data => {
-        todasQuestoes = data;
-        console.log("Questões carregadas:", todasQuestoes);
+  .then(res => res.json())
+  .then(data => {
+    todasQuestoes = data;
+    mostrarQuestoes("Todas");
+  })
+  .catch(err => console.error("Erro ao carregar JSON:", err));
 
-        if (todasQuestoes.length > 0) {
-            mostrarQuestoes("Todas");
-        } else {
-            console.error("Nenhuma questão encontrada no JSON!");
-        }
-    })
-    .catch(error => console.error("Erro ao carregar JSON:", error));
-
-// Filtra questões pela categoria
-function filtrarQuestoes() {
-    let categoriaSelecionada = document.getElementById("filtro").value;
-    console.log("Categoria selecionada:", categoriaSelecionada);
-    mostrarQuestoes(categoriaSelecionada);
+// Atualiza a pontuação na tela
+function atualizarPontuacao() {
+  document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
 }
 
-// Verifica a resposta do usuário
-function verificarResposta(index, alternativaSelecionada, resultadoId) {
-    let questao = todasQuestoes[index];
-    let alternativaCorreta = questao.correta;
+// Filtro por categoria
+function filtrarQuestoes() {
+  const categoria = document.getElementById("filtro").value;
+  mostrarQuestoes(categoria);
+}
 
-    let resultadoDiv = document.getElementById(resultadoId);
-    let botoes = resultadoDiv.parentElement.querySelectorAll(".alternativa-btn");
+// Mostra as questões
+function mostrarQuestoes(categoria) {
+  const quiz = document.getElementById("quiz");
+  quiz.innerHTML = "";
 
-    botoes.forEach((botao, i) => {
-        botao.disabled = true;
+  const questoes = categoria === "Todas"
+    ? todasQuestoes
+    : todasQuestoes.filter(q => q.categoria === categoria);
 
-        if (i === alternativaCorreta) {
-            botao.classList.add("correto");
-        }
-        if (i === alternativaSelecionada && i !== alternativaCorreta) {
-            botao.classList.add("errado");
-        }
-    });
+  questoes.forEach((questao, index) => {
+    const div = document.createElement("div");
+    div.className = "question";
 
-    if (alternativaSelecionada === alternativaCorreta) {
-        pontuacao += 1;
-        resultadoDiv.innerHTML = "✅ Resposta correta!";
-        resultadoDiv.style.color = "green";
-    } else {
-        resultadoDiv.innerHTML = `❌ Resposta errada! A correta era a alternativa ${alternativaCorreta + 1}.`;
-        resultadoDiv.style.color = "red";
+    if (questao.enunciado) {
+      const p = document.createElement("p");
+      p.innerHTML = questao.enunciado;
+      div.appendChild(p);
     }
 
-    atualizarPontuacao();
+    if (questao.suporte) {
+      const img = document.createElement("img");
+      img.src = questao.suporte;
+      div.appendChild(img);
+    }
+
+    if (questao.comando) {
+      const cmd = document.createElement("p");
+      cmd.innerHTML = `<strong>${questao.comando}</strong>`;
+      div.appendChild(cmd);
+    }
+
+    const tipo = questao.tipo || "texto";
+    const altDiv = document.createElement("div");
+    altDiv.className = tipo === "imagem" ? "alternativas-imagem" : "alternativas";
+
+    let alternativaSelecionada = null;
+
+    questao.alternativas.forEach((alt, i) => {
+      const btn = document.createElement("button");
+      btn.className = "alternativa-btn";
+      btn.onclick = () => {
+        altDiv.querySelectorAll("button").forEach(b => b.classList.remove("selecionado"));
+        btn.classList.add("selecionado");
+        alternativaSelecionada = i;
+      };
+
+      if (tipo === "imagem") {
+        const img = document.createElement("img");
+        img.src = alt;
+        img.alt = `Alternativa ${i + 1}`;
+        btn.appendChild(img);
+      } else {
+        btn.innerText = alt;
+      }
+
+      altDiv.appendChild(btn);
+    });
+
+    const resultadoDiv = document.createElement("div");
+    resultadoDiv.id = `resultado-${index}`;
+    resultadoDiv.style.marginTop = "10px";
+    resultadoDiv.style.fontWeight = "bold";
+
+    const confirmar = document.createElement("button");
+    confirmar.className = "confirmar-btn";
+    confirmar.innerText = "Confirmar";
+    confirmar.onclick = () => {
+      if (alternativaSelecionada === null) {
+        resultadoDiv.innerText = "⚠️ Selecione uma alternativa!";
+        resultadoDiv.style.color = "orange";
+        return;
+      }
+      verificarResposta(index, alternativaSelecionada, resultadoDiv.id);
+    };
+
+    div.appendChild(altDiv);
+    div.appendChild(confirmar);
+    div.appendChild(resultadoDiv);
+
+    quiz.appendChild(div);
+  });
 }
 
-// Atualiza o placar de pontuação
-function atualizarPontuacao() {
-    document.getElementById("pontuacao").innerText = `Pontuação: ${pontuacao}`;
+// Verifica resposta
+function verificarResposta(index, selecionada, resultadoId) {
+  const questao = todasQuestoes[index];
+  const correta = questao.correta;
+
+  const resultadoDiv = document.getElementById(resultadoId);
+  const botoes = resultadoDiv.parentElement.querySelectorAll(".alternativa-btn");
+
+  botoes.forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === correta) btn.classList.add("correto");
+    if (i === selecionada && i !== correta) btn.classList.add("errado");
+  });
+
+  if (selecionada === correta) {
+    pontuacao++;
+    resultadoDiv.innerText = "✅ Resposta correta!";
+    resultadoDiv.style.color = "green";
+  } else {
+    resultadoDiv.innerText = `❌ Errada! A correta era a ${correta + 1}.`;
+    resultadoDiv.style.color = "red";
+  }
+
+  atualizarPontuacao();
 }
-
-// Mostra as questões filtradas
-function mostrarQuestoes(categoria) {
-    console.log("Função mostrarQuestoes() chamada para categoria:", categoria);
-    console.log("Questões carregadas:", todasQuestoes);
-
-    let quizContainer = document.getElementById("quiz");
-    quizContainer.innerHTML = "";
-
-    let questoesFiltradas = categoria === "Todas"
-        ? todasQuestoes
-        : todasQuestoes.filter(q => q.categoria === categoria);
-
-    console.log("Questões filtradas:", questoesFiltradas);
-
-    questoesFiltradas.forEach((questao, index) => {
-        let div = document.createElement("div");
-        div.className = "question";
-
-        // Enunciado
-        if (questao.enunciado) {
-            let enunciado = document.createElement("p");
-            enunciado.innerHTML = questao.enunciado;
-            div.appendChild(enunciado);
-        }
-
-        // Suporte (imagem)
-        if (questao.suporte) {
-            let img = document.createElement("img");
-            img.src = questao.suporte;
-            img.alt = "Imagem da questão";
-            div.appendChild(img);
-        }
-
-        // Comando
-        if (questao.comando) {
-            let comando = document.createElement("p");
-            comando.innerHTML = `<strong>${questao.comando}</strong>`;
-            div.appendChild(comando);
-        }
-
-        // Alternativas
-        let tipoQuestao = questao.tipo || "texto";
-        let alternativasDiv = document.createElement("div");
-        alternativasDiv.className = tipoQuestao === "imagem" ? "alternativas-imagem" : "alternativas";
-
-        let alternativaSelecionada = null;
-
-        questao.alternativas.for
