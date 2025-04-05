@@ -13,7 +13,7 @@
     "suporte": "",
     "comando": "Qual é a fração que representa as questões que ela acertou?",
     "tipo": "texto",
-    "alternativas": ["$\\frac{12}{20}$", "$\\frac{10}{12}$", "$\\frac{6}{10}$", "$\\frac{2}{5}$"],
+    "alternativas": ["$\\frac{8}{20}$", "$\\frac{10}{12}$", "$\\frac{6}{10}$", "$\\frac{2}{5}$"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
