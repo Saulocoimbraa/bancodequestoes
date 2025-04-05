@@ -151,4 +151,8 @@ function mostrarQuestoes(categoria) {
     });
 
     atualizarPontuacao(); // Atualiza pontuação ao mudar de categoria
+if (window.MathJax) {
+    MathJax.typesetPromise();
+}
+
 }
