@@ -26,21 +26,7 @@
     "correta": 1,
     "categoria": "Nu_Op"
   },
-  {
-    "enunciado": "Geometria: Resolva a soma $x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$",
-    "suporte": "imagens/suporte1.jpg",
-    "comando": "Escolha a alternativa correta.",
-    "tipo": "imagem",
-    "alternativas": [
-      "imagens/alternativa1.jpg",
-      "imagens/alternativa2.jpg",
-      "imagens/alternativa3.jpg",
-      "imagens/alternativa4.jpg"
-    ],
-    "correta": 2,
-    "categoria": "Geo"
-  },
-  {
+    {
     "enunciado": "Números e Operações: Qual o resultado de 8 × 12?",
     "suporte": "",
     "comando": "Escolha a alternativa correta.",
