@@ -145,8 +145,7 @@
   },
   {
     "enunciado": "Observe o sólido a seguir.",
-    "suporte": "",
-    "imagem":"imagens/cubo.jpg"
+    "suporte":"imagens/cubo.jpg",
     "comando": "Qual é a forma de cada face do cubo?",
     "tipo": "texto",
     "alternativas": ["Triângulo", "Retângulo", "Quadrado", "Círculo"],
