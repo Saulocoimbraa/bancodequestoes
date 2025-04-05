@@ -18,6 +18,56 @@
     "categoria": "Nu_Op"
   },
   {
+    "enunciado": "Grandezas e Medidas: Se um carro percorre 150 km em 3 horas, qual é sua velocidade média?",
+    "suporte": "",
+    "comando": "Escolha a alternativa correta.",
+    "tipo": "texto",
+    "alternativas": [
+      "30 km/h",
+      "40 km/h",
+      "50 km/h",
+      "60 km/h"
+    ],
+    "correta": 2,
+    "categoria": "Gr_Me"
+  },
+   {
+    "enunciado": "Observe os números: -5, -2, 0, 3, 7.",
+    "suporte": "",
+    "comando": "Qual desses números é o menor?",
+    "tipo": "texto",
+    "alternativas": ["-5", "-2", "0", "3"],
+    "correta": 0,
+    "categoria": "Nu_Op"
+  },
+   {
+    "enunciado": "Um caminhão transporta 3,5 toneladas de frutas.",
+    "suporte": "",
+    "comando": "Esse valor equivale a quantos quilogramas?",
+    "tipo": "texto",
+    "alternativas": ["350 kg", "3.500 kg", "35.000 kg", "0,35 kg"],
+    "correta": 1,
+    "categoria": "Gr_Me"
+  },
+  {
+    "enunciado": "Observe o sólido a seguir: um cubo.",
+    "suporte": "cubo.jpg",
+    "comando": "Qual é a forma de cada face do cubo?",
+    "tipo": "texto",
+    "alternativas": ["Triângulo", "Retângulo", "Quadrado", "Círculo"],
+    "correta": 2,
+    "categoria": "Geo"
+  },
+   {
+    "enunciado": "Um campo retangular tem 50 metros de comprimento e 30 metros de largura.",
+    "suporte": "",
+    "comando": "Qual é a área total desse campo?",
+    "tipo": "texto",
+    "alternativas": ["150 m²", "1.500 m²", "3.000 m²", "15.000 m²"],
+    "correta": 2,
+    "categoria": "Gr_Me"
+  },
+  {
     "enunciado": "Em um restaurante, $\\frac{2}{5}$ das mesas estão ocupadas.",
     "suporte": "",
     "comando": "Qual fração representa as mesas desocupadas?",
