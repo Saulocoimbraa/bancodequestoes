@@ -144,8 +144,9 @@
     "categoria": "Nu_Op"
   },
   {
-    "enunciado": "Observe o sólido a seguir: um cubo.",
+    "enunciado": "Observe o sólido a seguir.",
     "suporte": "",
+    "imagem":"imagens/cubo.jpg"
     "comando": "Qual é a forma de cada face do cubo?",
     "tipo": "texto",
     "alternativas": ["Triângulo", "Retângulo", "Quadrado", "Círculo"],
