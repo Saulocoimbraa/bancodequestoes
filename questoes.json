@@ -13,6 +13,20 @@
     "correta": 1,
     "categoria": "Nu_Op"
 },
+   {
+    "enunciado": "Em uma prova, Ana acertou 12 de 20 questões.",
+    "suporte": "",
+    "comando": "Qual é a fração que representa as questões que ela acertou?",
+    "tipo": "texto",
+    "alternativas": [
+        "12/20",
+        "10/12",
+        "6/10",
+        "2/5"
+    ],
+    "correta": 2,
+    "categoria": "Nu_Op"
+},
     {
     "enunciado": "Em uma horta escolar, foram colhidos 48 tomates. Os estudantes organizaram os tomates em 6 caixas com a mesma quantidade.",
     "suporte": "",
