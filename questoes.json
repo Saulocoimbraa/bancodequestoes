@@ -1,10 +1,10 @@
 [
   {
-    "enunciado": "Durante um mês, uma família gastou R\\$ 350,00 com alimentação, R\\$ 120,00 com transporte e R\\$ 230,00 com contas de casa.",
+    "enunciado": "Durante um mês, uma família gastou R$ 350,00 com alimentação, R$ 120,00 com transporte e R$ 230,00 com contas de casa.",
     "suporte": "",
     "comando": "Qual foi o gasto total dessa família nesse mês?",
     "tipo": "texto",
-    "alternativas": ["R\\$ 600,00", "R\\$ 700,00", "R\\$ 800,00", "R\\$ 900,00"],
+    "alternativas": ["R$ 600,00", "R$ 700,00", "R$ 800,00", "R$ 900,00"],
     "correta": 1,
     "categoria": "Nu_Op"
   },
@@ -13,7 +13,7 @@
     "suporte": "",
     "comando": "Qual é a fração que representa as questões que ela acertou?",
     "tipo": "texto",
-    "alternativas": ["12/20", "10/12", "6/10", "2/5"],
+    "alternativas": ["\\frac{12}{20}", "\\frac{10}{12}", "\\frac{6}{10}", "\\frac{2}{5}"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
@@ -90,11 +90,11 @@
     "categoria": "Geo"
   },
   {
-    "enunciado": "João pagou R\\$ 96,00 por 4 camisetas de mesmo valor.",
+    "enunciado": "João pagou R$ 96,00 por 4 camisetas de mesmo valor.",
     "suporte": "",
     "comando": "Qual é o preço de cada camiseta?",
     "tipo": "texto",
-    "alternativas": ["R\\$ 20,00", "R\\$ 22,00", "R\\$ 24,00", "R\\$ 26,00"],
+    "alternativas": ["R$ 20,00", "R$ 22,00", "R$ 24,00", "R$ 26,00"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
@@ -117,20 +117,20 @@
     "categoria": "Geo"
   },
   {
-    "enunciado": "Em um restaurante, 2/5 das mesas estão ocupadas.",
+    "enunciado": "Em um restaurante, \\frac{2}{5} das mesas estão ocupadas.",
     "suporte": "",
     "comando": "Qual fração representa as mesas desocupadas?",
     "tipo": "texto",
-    "alternativas": ["2/5", "3/5", "5/5", "1/2"],
+    "alternativas": ["\\frac{2}{5}", "\\frac{3}{5}", "\\frac{5}{5}", "\\frac{1}{2}"],
     "correta": 1,
     "categoria": "Nu_Op"
   },
   {
-    "enunciado": "Uma promoção oferece 30% de desconto em um produto de R\\$ 200,00.",
+    "enunciado": "Uma promoção oferece 30% de desconto em um produto de R$ 200,00.",
     "suporte": "",
     "comando": "Qual é o valor do desconto?",
     "tipo": "texto",
-    "alternativas": ["R\\$ 30,00", "R\\$ 50,00", "R\\$ 60,00", "R\\$ 70,00"],
+    "alternativas": ["R$ 30,00", "R$ 50,00", "R$ 60,00", "R$ 70,00"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
@@ -153,11 +153,11 @@
     "categoria": "Geo"
   },
   {
-    "enunciado": "Mariana escreveu a fração 5/10 no caderno.",
+    "enunciado": "Mariana escreveu a fração \\frac{5}{10} no caderno.",
     "suporte": "",
     "comando": "Qual fração é equivalente a essa?",
     "tipo": "texto",
-    "alternativas": ["1/5", "2/5", "1/2", "3/4"],
+    "alternativas": ["\\frac{1}{5}", "\\frac{2}{5}", "\\frac{1}{2}", "\\frac{3}{4}"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
@@ -166,7 +166,7 @@
     "suporte": "",
     "comando": "Que fração representa essa porcentagem?",
     "tipo": "texto",
-    "alternativas": ["1/2", "3/5", "2/3", "3/4"],
+    "alternativas": ["\\frac{1}{2}", "\\frac{3}{5}", "\\frac{2}{3}", "\\frac{3}{4}"],
     "correta": 1,
     "categoria": "Nu_Op"
   },
