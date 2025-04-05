@@ -1,163 +1,28 @@
 [
   {
-    "enunciado": "Durante um mês, uma família gastou R$ 350,00 com alimentação, R$ 120,00 com transporte e R$ 230,00 com contas de casa.",
-    "suporte": "",
-    "comando": "Qual foi o gasto total dessa família nesse mês?",
-    "tipo": "texto",
-    "alternativas": ["R$ 600,00", "R$ 700,00", "R$ 800,00", "R$ 900,00"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
     "enunciado": "Em uma prova, Ana acertou 12 de 20 questões.",
     "suporte": "",
     "comando": "Qual é a fração que representa as questões que ela acertou?",
     "tipo": "texto",
-    "alternativas": ["\\frac{12}{20}", "\\frac{10}{12}", "\\frac{6}{10}", "\\frac{2}{5}"],
+    "alternativas": ["$\\frac{12}{20}$", "$\\frac{10}{12}$", "$\\frac{6}{10}$", "$\\frac{2}{5}$"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
   {
-    "enunciado": "Em uma horta escolar, foram colhidos 48 tomates. Os estudantes organizaram os tomates em 6 caixas com a mesma quantidade.",
-    "suporte": "",
-    "comando": "Quantos tomates foram colocados em cada caixa?",
-    "tipo": "texto",
-    "alternativas": ["6", "8", "10", "12"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Números e Operações: Qual o resultado de 8 × 12?",
-    "suporte": "",
-    "comando": "Escolha a alternativa correta.",
-    "tipo": "texto",
-    "alternativas": ["16", "96", "104", "200"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Estatística: Qual a moda no conjunto {4, 6, 8, 6, 9, 6, 10}?",
-    "suporte": "imagens/estatistica.jpg",
-    "comando": "Escolha a alternativa correta.",
-    "tipo": "texto",
-    "alternativas": ["4", "6", "8", "10"],
-    "correta": 1,
-    "categoria": "Es_Pr"
-  },
-  {
-    "enunciado": "Álgebra: Se x + 5 = 12, qual é o valor de x?",
-    "suporte": "imagens/algebra.jpg",
-    "comando": "Escolha a alternativa correta.",
-    "tipo": "texto",
-    "alternativas": ["5", "6", "7", "8"],
-    "correta": 2,
-    "categoria": "Al_Fu"
-  },
-  {
-    "enunciado": "Grandezas e Medidas: Se um carro percorre 150 km em 3 horas, qual é sua velocidade média?",
-    "suporte": "imagens/velocidade.jpg",
-    "comando": "Escolha a alternativa correta.",
-    "tipo": "texto",
-    "alternativas": ["30 km/h", "40 km/h", "50 km/h", "60 km/h"],
-    "correta": 2,
-    "categoria": "Gr_Me"
-  },
-  {
-    "enunciado": "Um tanque tem capacidade de 150 litros e está com 90 litros de água.",
-    "suporte": "",
-    "comando": "Quantos litros ainda faltam para encher o tanque?",
-    "tipo": "texto",
-    "alternativas": ["50 L", "60 L", "70 L", "80 L"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Uma receita de bolo pede 0,75 litro de leite.",
-    "suporte": "",
-    "comando": "Essa medida corresponde a quantos mililitros?",
-    "tipo": "texto",
-    "alternativas": ["75 mL", "750 mL", "7.500 mL", "0,0075 mL"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Um mapa tem escala 1:1000.",
-    "suporte": "",
-    "comando": "Se a distância entre dois pontos no mapa é de 5 cm, qual é a distância real entre eles?",
-    "tipo": "texto",
-    "alternativas": ["5 m", "50 m", "500 m", "5000 m"],
-    "correta": 2,
-    "categoria": "Geo"
-  },
-  {
-    "enunciado": "João pagou R$ 96,00 por 4 camisetas de mesmo valor.",
-    "suporte": "",
-    "comando": "Qual é o preço de cada camiseta?",
-    "tipo": "texto",
-    "alternativas": ["R$ 20,00", "R$ 22,00", "R$ 24,00", "R$ 26,00"],
-    "correta": 2,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Observe a sequência: 3, 6, 12, 24, ...",
-    "suporte": "",
-    "comando": "Qual é a próxima figura da sequência?",
-    "tipo": "texto",
-    "alternativas": ["36", "42", "48", "50"],
-    "correta": 2,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Um campo retangular tem 50 metros de comprimento e 30 metros de largura.",
-    "suporte": "",
-    "comando": "Qual é a área total desse campo?",
-    "tipo": "texto",
-    "alternativas": ["150 m²", "1.500 m²", "3.000 m²", "15.000 m²"],
-    "correta": 2,
-    "categoria": "Geo"
-  },
-  {
-    "enunciado": "Em um restaurante, \\frac{2}{5} das mesas estão ocupadas.",
+    "enunciado": "Em um restaurante, $\\frac{2}{5}$ das mesas estão ocupadas.",
     "suporte": "",
     "comando": "Qual fração representa as mesas desocupadas?",
     "tipo": "texto",
-    "alternativas": ["\\frac{2}{5}", "\\frac{3}{5}", "\\frac{5}{5}", "\\frac{1}{2}"],
+    "alternativas": ["$\\frac{2}{5}$", "$\\frac{3}{5}$", "$\\frac{5}{5}$", "$\\frac{1}{2}$"],
     "correta": 1,
     "categoria": "Nu_Op"
   },
   {
-    "enunciado": "Uma promoção oferece 30% de desconto em um produto de R$ 200,00.",
-    "suporte": "",
-    "comando": "Qual é o valor do desconto?",
-    "tipo": "texto",
-    "alternativas": ["R$ 30,00", "R$ 50,00", "R$ 60,00", "R$ 70,00"],
-    "correta": 2,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Um ônibus percorreu 240 km em 4 horas.",
-    "suporte": "",
-    "comando": "Qual foi a velocidade média do ônibus?",
-    "tipo": "texto",
-    "alternativas": ["50 km/h", "55 km/h", "60 km/h", "65 km/h"],
-    "correta": 2,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Observe o sólido a seguir.",
-    "suporte": "imagens/cubo.jpg",
-    "comando": "Qual é a forma de cada face do cubo?",
-    "tipo": "texto",
-    "alternativas": ["Triângulo", "Retângulo", "Quadrado", "Círculo"],
-    "correta": 2,
-    "categoria": "Geo"
-  },
-  {
-    "enunciado": "Mariana escreveu a fração \\frac{5}{10} no caderno.",
+    "enunciado": "Mariana escreveu a fração $\\frac{5}{10}$ no caderno.",
     "suporte": "",
     "comando": "Qual fração é equivalente a essa?",
     "tipo": "texto",
-    "alternativas": ["\\frac{1}{5}", "\\frac{2}{5}", "\\frac{1}{2}", "\\frac{3}{4}"],
+    "alternativas": ["$\\frac{1}{5}$", "$\\frac{2}{5}$", "$\\frac{1}{2}$", "$\\frac{3}{4}$"],
     "correta": 2,
     "categoria": "Nu_Op"
   },
@@ -165,45 +30,4 @@
     "enunciado": "Na escola, 60% dos alunos são do turno da manhã.",
     "suporte": "",
     "comando": "Que fração representa essa porcentagem?",
-    "tipo": "texto",
-    "alternativas": ["\\frac{1}{2}", "\\frac{3}{5}", "\\frac{2}{3}", "\\frac{3}{4}"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Em uma pesquisa, 18 de 30 estudantes disseram gostar de matemática.",
-    "suporte": "",
-    "comando": "Qual é a porcentagem de alunos que gostam de matemática?",
-    "tipo": "texto",
-    "alternativas": ["50%", "60%", "75%", "80%"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Qual o valor da expressão: 4 + 2 × 5?",
-    "suporte": "",
-    "comando": "",
-    "tipo": "texto",
-    "alternativas": ["14", "20", "30", "40"],
-    "correta": 0,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Observe os números: -5, -2, 0, 3, 7.",
-    "suporte": "",
-    "comando": "Qual desses números é o menor?",
-    "tipo": "texto",
-    "alternativas": ["-5", "-2", "0", "3"],
-    "correta": 0,
-    "categoria": "Nu_Op"
-  },
-  {
-    "enunciado": "Um caminhão transporta 3,5 toneladas de frutas.",
-    "suporte": "",
-    "comando": "Esse valor equivale a quantos quilogramas?",
-    "tipo": "texto",
-    "alternativas": ["350 kg", "3.500 kg", "35.000 kg", "0,35 kg"],
-    "correta": 1,
-    "categoria": "Nu_Op"
-  }
-]
+    "tipo": "
