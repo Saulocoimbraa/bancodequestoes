@@ -64,7 +64,7 @@
     "comando": "Qual é a área total desse campo?",
     "tipo": "texto",
     "alternativas": ["150 m²", "1.500 m²", "3.000 m²", "15.000 m²"],
-    "correta": 2,
+    "correta": 1,
     "categoria": "Gr_Me"
   },
   {
