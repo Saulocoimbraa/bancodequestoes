@@ -176,7 +176,7 @@
     "comando": "Qual é a porcentagem de alunos que gostam de matemática?",
     "tipo": "texto",
     "alternativas": ["50%", "60%", "75%", "80%"],
-    "correta": 2,
+    "correta": 1,
     "categoria": "Nu_Op"
   },
   {
